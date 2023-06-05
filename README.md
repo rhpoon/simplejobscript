@@ -49,6 +49,19 @@ Download the software from [product pages](https://simplejobscript.com/downloads
 3. Create database for your site and finish the installation in the browser
 
 
+### apache instal note 2023/06/05 ###
+
+You have to change from 755 to 775 (assume using: owner | www-data | others) for the following 3 folders  to allow creating TPL inside.
+
+chmod 775	/_TPL    plus    /default   /static
+
+Please note that in Page_update.php of sjs-admin folder, $newfile is create for TPL updates in the static folders
+
+
+
+
+
+
 ## License
 
 This project is licensed under the [MIT License](https://github.com/Microsoft/calculator/blob/master/LICENSE) - see the [LICENSE](LICENSE) file for details.
